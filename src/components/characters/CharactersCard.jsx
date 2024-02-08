@@ -4,13 +4,15 @@ function CharactersCard({char}) {
 
 
   return (
-    <>
-    <div>
-      <img src={char.image}/> 
+    
+    <div className="card-style">
+      <img src={char.image}/>
+      <div className="text-container">
       <p> {char.name}  </p>
       <p> {char.species} </p>
+      </div> 
       </div>
-    </>
+    
   )
 }
 

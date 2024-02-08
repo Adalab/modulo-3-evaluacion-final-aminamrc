@@ -2,8 +2,10 @@
 
 function FilterByName() {
   return (
-    <div>
-      
+    <div className="filter-style">
+      <label className="filter-text-style"> Buscar por nombre  </label>
+      <input type="text" name="" id="" className="filter-square-style" />
+     
     </div>
   )
 }

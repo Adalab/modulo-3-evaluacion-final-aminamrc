@@ -1,1 +1,72 @@
-@import 'core/reset'
+@import 'core/reset';
+
+
+.page {
+  background-color: gray;
+  
+}
+
+.list-style {
+    display: flex;
+    margin: 50px;
+    width: 100%;
+   
+    
+}
+
+.card-style img {
+    width: 150px;
+    height: 200px;
+    
+    
+}
+
+.list-item-style {
+    list-style: none;
+    
+}
+
+.card-style {
+    width: 160px;
+    height: 250px;
+    border: 6px solid darkgoldenrod;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+
+.header h1 {
+    color: darkgoldenrod;
+
+}
+
+.header {
+    padding: 20px;
+}
+
+
+.filter-style {
+    margin: 20px;
+    display: inline;
+    
+}
+
+.filter-square-style {
+    background-color: gray;
+    border: 1px solid white;
+    
+    
+}
+
+.filter-text-style {
+    color: white;
+    
+}
+
+.text-container {
+    background-color: darkgoldenrod;
+    color: white;
+}

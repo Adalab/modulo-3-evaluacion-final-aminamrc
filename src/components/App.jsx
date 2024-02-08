@@ -3,10 +3,16 @@ import "../scss/App.scss"
 import getApi from "../services/getApi"
 import { useState } from "react";
 import CharactersList from "./characters/CharactersList";
+import FilterByName from "./filters/FilterByName";
+import FilterbyHouse from "./filters/FilterByHouse"
+import Header from "./Header";
 
 function App() {
 
 const [characters, setCharacters] = useState ([]);
+const [filterName, setFilterName] = useState ([]);
+const [filterHouse, setFilterHouse] = useState ([]);
+
 
 useEffect(() => {
   getApi().then((cleanData) => {
@@ -16,12 +22,14 @@ useEffect(() => {
 
 
   return ( 
-  <>
+  <div className="page">
   
-  <h1> Harry Potter </h1>
-
+  <Header/>
+  <FilterByName />
+  <FilterbyHouse/>
   <CharactersList characters= {characters} />
-  </>
+  
+  </div>
   )
 }
 

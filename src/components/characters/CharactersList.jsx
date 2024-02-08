@@ -4,21 +4,20 @@ import CharactersCard from "./CharactersCard"
 function CharactersList({characters}) {
  
     const renderCharacters = characters.map((char,i) => {
-           return <li key={i}> <CharactersCard char={char}/> 
+           return <li className="list-item-style" key={i}> <CharactersCard char={char}/> 
            </li> 
          })
     
 
   return (
-    <>
-    <h3> List of characters </h3>
+    <div className="list-style">
     <ul>
         {renderCharacters}
     </ul>
       
       
     
-    </>
+    </div>
   )
 }
 
