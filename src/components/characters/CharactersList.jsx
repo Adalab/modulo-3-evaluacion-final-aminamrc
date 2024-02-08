@@ -4,7 +4,7 @@ import CharactersCard from "./CharactersCard"
 function CharactersList({characters}) {
  
     const renderCharacters = characters.map((char,i) => {
-           return <li key={i}> <CharactersCard characters={characters}/> 
+           return <li key={i}> <CharactersCard char={char}/> 
            </li> 
          })
     
