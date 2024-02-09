@@ -3,7 +3,7 @@
 const getApi = () => {
 
 
-  return fetch ('https://hp-api.onrender.com/api/characters/house/gryffindor')
+  return fetch ('https://hp-api.onrender.com/api/characters')
   .then((response) => response.json())
   .then((data) => {
     const cleanData = data.map((char) => {

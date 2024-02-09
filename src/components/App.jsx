@@ -10,8 +10,32 @@ import Header from "./Header";
 function App() {
 
 const [characters, setCharacters] = useState ([]);
-const [filterName, setFilterName] = useState ([]);
-const [filterHouse, setFilterHouse] = useState ([]);
+const [filterName, setFilterName] = useState ("");
+const [filterHouse, setFilterHouse] = useState ("");
+
+const filterOfName = (value)=> {
+  setFilterName(value)
+}
+
+const filterOfHouse = (value)=> {
+  setFilterHouse(value)
+}
+
+
+const filteredCharacters = characters
+    .filter((charName) => charName.name.toLowerCase().includes(filterName)) 
+    .filter((charHouse) => {
+      if (filterHouse === "All" || filterHouse === "" ) {
+        return true;
+      } else {
+      return charHouse.house === filterHouse}
+    })
+
+
+
+
+
+
 
 
 useEffect(() => {
@@ -25,9 +49,9 @@ useEffect(() => {
   <div className="page">
   
   <Header/>
-  <FilterByName />
-  <FilterbyHouse/>
-  <CharactersList characters= {characters} />
+  <FilterByName filterOfName= {filterOfName} />
+  <FilterbyHouse filterOfHouse= {filterOfHouse}/>
+  <CharactersList characters= {filteredCharacters} />
   
   </div>
   )
