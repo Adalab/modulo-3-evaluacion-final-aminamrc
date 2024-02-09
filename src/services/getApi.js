@@ -11,6 +11,9 @@ const getApi = (filterHouse) => {
         image: char.image,
         name: char.name,
         species: char.species,
+        id: char.id,
+        status: char.alive,
+        gender: char.gender,
       };
     });
     return cleanData;

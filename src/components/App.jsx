@@ -39,24 +39,25 @@ const filteredCharacters = characters
 
     
 
-  return ( 
+  return (  <>
   <div className="page">
-  
+   <Header/>
   <Routes>
       <Route path="/" element={
         <>
-          <Header/>
+          
           <FilterByName filterOfName= {filterOfName} />
           <FilterbyHouse filterOfHouse= {filterOfHouse}/>
           <CharactersList characters= {filteredCharacters} />
         </>
       } />
-      <Route path="/detail" element={<DetailedCharacter filteredCharacters={filteredCharacters}/>} />
+      <Route path="/detail/:id" element={<DetailedCharacter characters={characters}/>} />
     </Routes>
   
   
   
   </div>
+  </>
   )
 }
 

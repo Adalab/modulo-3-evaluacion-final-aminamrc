@@ -1,15 +1,14 @@
 import CharactersCard from "./CharactersCard"
-
+import { Link } from "react-router-dom"
 
 function CharactersList({characters}) {
-  //  <Link to={`/detail/${char.id}`}> 
-  // <DetailedCharacter filteredCharacters={filteredCharactersf} />
-  // </Link>
+
+  
+  //   
  
- 
-    const renderCharacters = characters.map((char,i) => {
-           return <li className="list-item-style" key={char.id}> <CharactersCard char={char}/> 
-           </li> 
+    const renderCharacters = characters.map((char) => {
+           return <li className="list-item-style" key={char.id}>< Link to= {`/detail/${char.id}`}> <CharactersCard char={char}/> 
+          </Link> </li> 
          })
     
 

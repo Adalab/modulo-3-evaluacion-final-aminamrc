@@ -4,6 +4,7 @@
 .page {
   background-color: gray;
   
+  
 }
 
 .list-style {
@@ -72,4 +73,38 @@
 .text-container {
     background-color: darkgoldenrod;
     color: white;
+}
+
+.card-style-details {
+    width: 300px;
+    height: 245px;
+    border: 8px solid darkred;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.text-container-details {
+    width: 250px;
+    height: 240px;
+    background-color: darkred;
+    color: white;
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.card-style-details img {
+ 
+    width: 170px;
+    height: 225px;
+    
+
 }

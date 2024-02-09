@@ -1,22 +1,30 @@
+import { useParams } from "react-router-dom"
 
-function DetailedCharacter({filteredCharacters}) {
 
-  const renderCharacters = filteredCharacters.map((char,i) => {
-    return <li className="list-item-style" key={i}> {char} 
-    </li> 
-  })
+function DetailedCharacter({characters}) {
+
+  const {id} = useParams()
+  console.log (id)
+
+  const idData = characters.find((char) => char.id === id);
+  console.log (idData)
+//quitar map
+  // const renderCharacters = characters.map((char) => {
+  //   return <li className="list-item-style" key={char.id}> {char} 
+  //   </li> 
+  // })
   return (
-    <div>
-      <h6> Details </h6>
-      <div className="card-style">
-      <img src={renderCharacters.image}/>
-      <div className="text-container">
-      <p> {renderCharacters.name}  </p>
-      <p> {renderCharacters.species} </p>
+    <div className="card-style-details">
+      <img src={idData.image} />
+      <div className="text-container-details">
+      <p> {idData.name} </p>
+      <p> {idData.species} </p>
+      <p> {idData.status }  ♥  </p>
+      <p> {idData.gender}</p>
       </div> 
       </div>
     
-    </div>
+   
   )
 }
 
