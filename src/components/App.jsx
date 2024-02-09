@@ -6,12 +6,23 @@ import CharactersList from "./characters/CharactersList";
 import FilterByName from "./filters/FilterByName";
 import FilterbyHouse from "./filters/FilterByHouse"
 import Header from "./Header";
+import DetailedCharacter from "./details/DetailedCharacter";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
 
 const [characters, setCharacters] = useState ([]);
 const [filterName, setFilterName] = useState ("");
-const [filterHouse, setFilterHouse] = useState ("");
+const [filterHouse, setFilterHouse] = useState ("Gryffindor");
+
+
+
+useEffect(() => {
+  getApi(filterHouse).then((cleanData) => {
+    setCharacters(cleanData)
+  })
+}, [filterHouse])
+
 
 const filterOfName = (value)=> {
   setFilterName(value)
@@ -24,34 +35,26 @@ const filterOfHouse = (value)=> {
 
 const filteredCharacters = characters
     .filter((charName) => charName.name.toLowerCase().includes(filterName)) 
-    .filter((charHouse) => {
-      if (filterHouse === "All" || filterHouse === "" ) {
-        return true;
-      } else {
-      return charHouse.house === filterHouse}
-    })
 
 
-
-
-
-
-
-
-useEffect(() => {
-  getApi().then((cleanData) => {
-    setCharacters(cleanData)
-  })
-}, [])
-
+    
 
   return ( 
   <div className="page">
   
-  <Header/>
-  <FilterByName filterOfName= {filterOfName} />
-  <FilterbyHouse filterOfHouse= {filterOfHouse}/>
-  <CharactersList characters= {filteredCharacters} />
+  <Routes>
+      <Route path="/" element={
+        <>
+          <Header/>
+          <FilterByName filterOfName= {filterOfName} />
+          <FilterbyHouse filterOfHouse= {filterOfHouse}/>
+          <CharactersList characters= {filteredCharacters} />
+        </>
+      } />
+      <Route path="/detail" element={<DetailedCharacter filteredCharacters={filteredCharacters}/>} />
+    </Routes>
+  
+  
   
   </div>
   )
