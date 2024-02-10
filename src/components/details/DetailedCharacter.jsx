@@ -15,7 +15,7 @@ function DetailedCharacter({characters}) {
   // })
   return (
     <div className="card-style-details">
-      <img src={idData.image} />
+      { idData.image === "" ? <img src =" https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter"/> : <img src={idData.image}/>}
       <div className="text-container-details">
       <p> {idData.name} </p>
       <p> {idData.species} </p>
