@@ -17,10 +17,11 @@ function DetailedCharacter({characters}) {
     <div className="card-style-details">
       { idData.image === "" ? <img src =" https://via.placeholder.com/210x295/ffffff/666666/?text=HarryPotter"/> : <img src={idData.image}/>}
       <div className="text-container-details">
-      <p> {idData.name} </p>
-      <p> {idData.species} </p>
-      {idData.status ? <p> Alive  ♡  </p> : <p> Dead ☠︎︎  </p> }
-      <p> {idData.gender}</p>
+      <h3> {idData.name} </h3>
+      <p> Species: {idData.species} </p>
+      {idData.status ? <p> Status: Alive  ♡  </p> : <p> Status: Dead ☠︎︎  </p> }
+      <p> Gender: {idData.gender} </p>
+      <p> House: {idData.house} </p>
       </div> 
       </div>
     

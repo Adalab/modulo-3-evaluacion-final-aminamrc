@@ -34,7 +34,12 @@ const filterOfHouse = (value)=> {
 
 
 const filteredCharacters = characters
-    .filter((charName) => charName.name.toLowerCase().includes(filterName)) 
+    .filter((charName) => charName.name.toLowerCase().includes(filterName))
+    // if (filteredCharacters.length <= 0) {
+    //   <p> Error </p>
+    // } else {
+    //   return filteredCharacters
+    // })
 
 
     

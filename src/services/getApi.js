@@ -14,6 +14,7 @@ const getApi = (filterHouse) => {
         id: char.id,
         status: char.alive,
         gender: char.gender,
+        house: char.house,
       };
     });
     return cleanData;
