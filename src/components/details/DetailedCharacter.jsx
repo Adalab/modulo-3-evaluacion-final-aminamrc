@@ -19,7 +19,7 @@ function DetailedCharacter({characters}) {
       <div className="text-container-details">
       <p> {idData.name} </p>
       <p> {idData.species} </p>
-      <p> {idData.status }  ♥  </p>
+      {idData.status ? <p> Alive  ♡  </p> : <p> Dead ☠︎︎  </p> }
       <p> {idData.gender}</p>
       </div> 
       </div>
