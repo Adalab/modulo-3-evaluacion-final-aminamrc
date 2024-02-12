@@ -8,11 +8,7 @@ function DetailedCharacter({characters}) {
 
   const idData = characters.find((char) => char.id === id);
   console.log (idData)
-//quitar map
-  // const renderCharacters = characters.map((char) => {
-  //   return <li className="list-item-style" key={char.id}> {char} 
-  //   </li> 
-  // })
+
   return (  <>
     <div className="btn-style">
      <Link to="/" className="rtn-style"><p> 🠔 Volver </p>  </Link>
