@@ -4,14 +4,17 @@
 .page {
   background-color: gray;
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
   padding: 50px;
 }
 
 .list-style {
     display: flex;
-    margin: 50px;
+    padding: 50px;
     width: 100%;
-   
+    
+    
+    
     
 }
 
@@ -24,8 +27,8 @@
 
 .list-item-style {
     list-style: none;
-    display: flex;
-   justify-content: space-between;
+
+    
    
     
 }
@@ -38,8 +41,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    
+   
+
 }
 
 .header img {
@@ -63,13 +66,14 @@
 
 .filter-square-style {
     background-color: gray;
-    border: 1px solid white;
+    border: 2px solid darkgoldenrod;
     
     
 }
 
 .filter-text-style {
     color: white;
+    
     
 }
 
@@ -97,7 +101,7 @@
     background-color: darkred;
     color: white;
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
@@ -129,6 +133,17 @@
 }
 
 .radio-style {
+    gap: 10px;
+}
+
+
+.radio {
     color: white;
-    gap: 5px;
+}
+
+.select-box {
+    color: white;
+    background-color: gray;
+    border: 2px solid darkgoldenrod;
+    font-size: medium;
 }

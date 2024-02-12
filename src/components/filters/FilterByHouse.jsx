@@ -10,7 +10,7 @@ function FilterByHouse({filterOfHouse, filterHouse }) {
     <div className="filter-style">
       <form> 
       <label className="filter-text-style"> Buscar por casa </label>
-        <select name="house" id="house" value= {filterHouse} onChange={handleInput}>
+        <select name="house" id="house" value= {filterHouse} onChange={handleInput} className="select-box">
         {/* <option value="All"> All </option> */}
         <option value="Gryffindor"> Gryffindor </option>
         <option value="Ravenclaw"> Ravenclaw </option>

@@ -1,5 +1,4 @@
 
-
 function FilterByGender({filterGender, filterOfGender}) {
 
     const handleRadio = (ev) => {
@@ -7,18 +6,22 @@ function FilterByGender({filterGender, filterOfGender}) {
     }
 
   return (
-    <div className="radio-style">
+    <div className="radio">
         <form>
-       <label>
+       <label className="label-radio">
                 Buscar por genero
             </label>
-            <input type="radio" name="gender" value="f" onChange={handleRadio} checked={filterGender === "f"} />
-            <label htmlFor=""> Female</label>
-            <input type="radio" name="gender" value="m" onChange={handleRadio} checked={filterGender === "m"} />
-            <label htmlFor=""> Male</label>
+            <input   type="radio" name="gender" value="f" onChange={handleRadio} checked={filterGender === "f"} />
+            <label className="radio-style" htmlFor=""> Mujer </label>
+            
+            <input   type="radio" name="gender" value="m" onChange={handleRadio} checked={filterGender === "m"} />
+            <label className="radio-style" htmlFor=""> Hombre</label>
+          
             </form>
     </div>
   )
 }
+
+
 
 export default FilterByGender
